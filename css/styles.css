@@ -3,10 +3,35 @@
     --color-button: #4263eb;
     --color-hover: #364fc7;
     --color-black-text: #00082f;
+    --color-text-white: #fff;
 
     /* Fonts */
     --font-base: 'Roboto', sans-serif;
     --font-secondary: 'Roboto Mono', monospace;
+
+    /* Dark Blue Theme */
+    --bg-color-dark: #00082f;
+
+    /* Pink Theme */
+    --color-pink-primary: #d6336c;
+    --color-pink-dark: #a61e4d;
+
+    /* Dark Pink */
+    --bg-color-dark-pink: #1f000b;
+
+    /* Green Theme */
+    --color-green-primary: #28B463;
+    --color-green-dark: #1E8449;
+
+    /* Dark Green */
+    --bg-color-dark-green: #001b00;
+
+    /* Yellow Theme */
+    --color-yellow-primary: #FDD835;
+    --color-yellow-dark: #CC9900;
+
+    /* Dark Yellow */
+    --bg-color-dark-yellow: #201a02;
 
     font-size: 62.50%;
 }
@@ -23,6 +48,7 @@
 body {
     font-size: 1.6rem;
     font-family: var(--font-base);
+    color: var(--color-black-text);
 }
 
 .icon {
@@ -53,7 +79,6 @@ body {
     margin-top: 2.4rem;
     margin-bottom: .8rem;
     font-size: 3.2rem;
-    color: var(--color-black-text);
 }
 
 .username {
@@ -61,7 +86,6 @@ body {
     font-size: 1.8rem;
     font-weight: 400;
     opacity: 0.8;
-    color: var(--color-black-text);
 }
 
 .container ul {
@@ -77,7 +101,7 @@ ul li a {
     height: 5.3rem; 
     background-color: var(--color-button);
     border-radius: .6rem;
-    color: #fff;  
+    color: var(--color-text-white);  
     font-size: 1.4rem;
     text-transform: uppercase;  
 
@@ -95,7 +119,6 @@ ul li a:hover {
 footer {
     font-weight: 500;
     font-size: 1.2rem;
-    color: var(--color-black-text);
     opacity: 0.6;
 
     transition: opacity .3s;
@@ -108,3 +131,96 @@ footer:hover {
 footer a {
     color: var(--color-black-text);
 }
+
+/* --- Dark Blue Theme --- */
+body.darkBlue {
+    background-color: var(--bg-color);
+    color: var(--color-text-white);
+}
+
+.darkBlue footer a {
+    color: var(--color-text-white);
+}
+
+/* --- Pink Theme  e Dark Pink--- */
+.pink .container img.avatar,
+.darkPink .container img.avatar {
+    border-color: var(--color-pink-primary);
+}
+
+.pink ul li a,
+.darkPink ul li a {
+    background-color: var(--color-pink-primary);
+}
+
+.pink ul li a:hover,
+.darkPink ul li a:hover {
+    background-color: var(--color-pink-dark);
+}
+
+
+.darkPink {
+    background-color: var(--bg-color-dark-pink);
+    color: var(--color-text-white);
+}
+
+.darkPink footer a {
+    color: var(--color-text-white);
+}
+
+/* --- Green e darkGreen Theme --- */
+.green .container img.avatar,
+.darkGreen .container img.avatar {
+    border-color: var(--color-green-primary);
+}
+
+
+.green ul li a,
+.darkGreen ul li a {
+    background-color: var(--color-green-primary);
+}
+
+.green ul li a:hover,
+.darkGreen ul li a:hover {
+    background-color: var(--color-green-dark);
+}
+
+.darkGreen {
+    background-color: var(--bg-color-dark-green);
+    color: var(--color-text-white);
+}
+
+.darkGreen footer a {
+    color: var(--color-text-white);
+}
+
+/* --- Yellow e Dark theme --- */
+.yellow .container img.avatar,
+.darkYellow .container img.avatar {
+    border-color: var(--color-yellow-primary);
+}
+
+
+.yellow ul li a,
+.darkYellow ul li a {
+    background-color: var(--color-yellow-primary);
+    color: var(--color-black-text);
+}
+
+.yellow ul li a:hover,
+.darkYellow ul li a:hover {
+    background-color: var(--color-yellow-dark);
+    color: var(--color-text-white);
+}
+
+.darkYellow {
+    background-color: var(--bg-color-dark-yellow);
+    color: var(--color-text-white);
+}
+
+.darkYellow footer a {
+    color: var(--color-text-white);
+}
+
+
+
