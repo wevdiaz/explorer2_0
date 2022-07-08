@@ -27,7 +27,24 @@ function changeTheme(e) {
 
     body.classList.add(`${themeChoose}`);
     closeModal();
+    saveTheme(themeChoose);
 }
+
+function saveTheme(theme) {
+    localStorage.removeItem("theme");
+    localStorage.setItem("theme", theme);
+}
+
+function loadTheme() {
+    const theme = localStorage.getItem("theme");
+    const body = document.querySelector("body");
+
+    if (theme) {
+        body.classList.add(theme);
+    }
+}
+
+loadTheme();
 
 const btnCloseModal = document.querySelector(".modal .btnClose");
 btnCloseModal.addEventListener("click", closeModal );
