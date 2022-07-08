@@ -387,20 +387,5 @@ body.darkBlue {
     .theme span {
         font-size: 1.4rem;
     }
-
-    .modal {
-        width: 100vh;
-        height: 100vh;
-        padding: 1.6rem;
-        
-        justify-content: space-around;
-        align-items: flex-start;
-        position: fixed;
-        top: -195px;
-        
-    }
-
-    .modal .btnClose {
-        right: 47rem;
-    }
+   
 }
