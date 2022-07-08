@@ -12,7 +12,12 @@
     <!--CSS-->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="darkYellow">
+<body>
+    <div class="button-theme">
+        <button onclick="openModal()">
+            <ion-icon name="color-palette-outline"></ion-icon>
+        </button>
+    </div>
     <div class="container">
         <img class="avatar" src="https://github.com/wevdiaz.png" alt="foto de perfil do github">
         <h1>Weverson Diazz</h1>
@@ -62,6 +67,48 @@
 
         <footer>Feito com 💜 by <a href="https://github.com/wevdiaz/explorer2_0">Diazz</a></footer>
     </div>
+
+    <div class="overlay">
+        <div class="modal">
+            <div class="theme" data-theme="blue">
+                <div class="color-circle"></div>
+                <span>Blue</span>
+            </div>
+            <div class="theme" data-theme="darkBlue">
+                <div class="color-circle"></div>
+                <span>Dark Blue</span>
+            </div>
+            <div class="theme" data-theme="pink">
+                <div class="color-circle"></div>
+                <span>Pink</span>
+            </div>
+            <div class="theme" data-theme="darkPink">
+                <div class="color-circle"></div>
+                <span>Dark Pink</span>
+            </div>
+            <div class="theme" data-theme="green">
+                <div class="color-circle"></div>
+                <span>Green</span>
+            </div>
+            <div class="theme" data-theme="darkGreen">
+                <div class="color-circle"></div>
+                <span>Dark Green</span>
+            </div>
+            <div class="theme" data-theme="yellow">
+                <div class="color-circle"></div>
+                <span>Yellow</span>
+            </div>
+            <div class="theme" data-theme="darkYellow">
+                <div class="color-circle"></div>
+                <span>Dark Yellow</span>
+            </div>
+            <ion-icon class="btnClose" name="close-outline"></ion-icon>
+        </div>
+    </div>
     
+    <!--JS-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

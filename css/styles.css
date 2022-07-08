@@ -49,6 +49,28 @@ body {
     font-size: 1.6rem;
     font-family: var(--font-base);
     color: var(--color-black-text);
+
+    transition: background-color .5s;
+}
+
+.button-theme {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.button-theme button {
+    border: none;
+    background-color: transparent;
+}
+
+.button-theme ion-icon {
+    font-size: 3rem;
+    transition: opacity .4s;
+    cursor: pointer;
+}
+
+.button-theme ion-icon:hover {
+    opacity: 0.3;
 }
 
 .icon {
@@ -134,7 +156,11 @@ footer a {
 
 /* --- Dark Blue Theme --- */
 body.darkBlue {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-dark);
+    color: var(--color-text-white);
+}
+
+.darkBlue .button-theme button {
     color: var(--color-text-white);
 }
 
@@ -164,6 +190,10 @@ body.darkBlue {
     color: var(--color-text-white);
 }
 
+.darkPink .button-theme button {
+    color: var(--color-text-white);
+}
+
 .darkPink footer a {
     color: var(--color-text-white);
 }
@@ -187,6 +217,10 @@ body.darkBlue {
 
 .darkGreen {
     background-color: var(--bg-color-dark-green);
+    color: var(--color-text-white);
+}
+
+.darkGreen .button-theme button {
     color: var(--color-text-white);
 }
 
@@ -218,9 +252,139 @@ body.darkBlue {
     color: var(--color-text-white);
 }
 
+.darkYellow .button-theme button {
+    color: var(--color-text-white);
+}
+
 .darkYellow footer a {
     color: var(--color-text-white);
 }
 
+/* --- Modal --- */
 
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    width: 30rem;
+    height: 40rem;
+    margin: 25vh auto;
+    padding: 1.6rem;
+    background-color: #fff;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+}
+
+.modal .theme {
+    width: 12rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme .color-circle {
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+    border-radius: 50%;
+    border: 3px solid #999;
+}
+
+.theme span {
+    color: #00082f;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all .3s;
+}
+
+.theme span:hover {
+    opacity: 0.2;
+    text-decoration: underline;
+}
+
+.modal .btnClose {
+    color: #000;
+    font-size: 3.2rem;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    transition: color .3s;
+    cursor: pointer;
+}
+
+.modal .btnClose:hover {
+    color: red;
+}
+
+/* Colors Theme */
+.theme[data-theme="blue"] > div{
+    background-color: var(--color-button);
+}
+
+.theme[data-theme="darkBlue"] > div{
+    background-color: var(--bg-color-dark);
+}
+
+.theme[data-theme="pink"] > div{
+    background-color: var(--color-pink-primary);
+}
+
+.theme[data-theme="darkPink"] > div{
+    background-color: var(--bg-color-dark-pink);
+}
+
+.theme[data-theme="green"] > div{
+    background-color: var(--color-green-primary);
+}
+
+.theme[data-theme="darkGreen"] > div{
+    background-color: var(--bg-color-dark-green);
+}
+
+.theme[data-theme="yellow"] > div{
+    background-color: var(--color-yellow-primary);
+}
+
+.theme[data-theme="darkYellow"] > div{
+    background-color: var(--bg-color-dark-yellow);
+}
+
+@media (max-width: 370px) {
+    .container {
+        width: 25rem;
+    }
+
+    .modal {
+        width: 25rem;
+    }
+
+    .theme span {
+        font-size: 1.4rem;
+    }
+}
